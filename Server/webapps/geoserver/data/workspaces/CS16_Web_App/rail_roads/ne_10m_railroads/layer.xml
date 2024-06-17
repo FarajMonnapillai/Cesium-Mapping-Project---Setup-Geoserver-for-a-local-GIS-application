@@ -1,0 +1,17 @@
+<layer>
+  <name>ne_10m_railroads</name>
+  <id>LayerInfoImpl-21df85a:17eb5f177c5:-5afb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-21df85a:17eb5f177c5:-5afa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-21df85a:17eb5f177c5:-5afc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 16:27:50.900 UTC</dateCreated>
+  <dateModified>2022-02-01 16:29:46.27 UTC</dateModified>
+</layer>

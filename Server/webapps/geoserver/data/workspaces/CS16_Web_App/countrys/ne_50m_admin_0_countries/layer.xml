@@ -1,0 +1,18 @@
+<layer>
+  <name>ne_50m_admin_0_countries</name>
+  <id>LayerInfoImpl--27720a4e:17e9bfc2025:-7e72</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--27720a4e:17e9bfc2025:-7e6e</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--27720a4e:17e9bfc2025:-7e73</id>
+  </resource>
+  <opaque>true</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-01-27 14:44:34.251 UTC</dateCreated>
+  <dateModified>2022-01-30 06:37:59.540 UTC</dateModified>
+</layer>

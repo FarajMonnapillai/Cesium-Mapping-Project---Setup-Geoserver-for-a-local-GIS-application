@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--27720a4e:17e9bfc2025:-7e70</id>
+  <name>ne_10m_roads</name>
+  <nativeName>ne_10m_roads</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4e1fff1b:17e9698330a:-7ffe</id>
+  </namespace>
+  <title>ne_10m_roads</title>
+  <keywords>
+    <string>features</string>
+    <string>ne_10m_roads</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-166.532487587878</minx>
+    <maxx>178.41907902319156</maxx>
+    <miny>-55.11212400026874</miny>
+    <maxy>71.17768427804648</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-166.532487587878</minx>
+    <maxx>178.41907902319156</maxx>
+    <miny>-55.11212400026874</miny>
+    <maxy>71.17768427804648</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--27720a4e:17e9bfc2025:-7e71</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

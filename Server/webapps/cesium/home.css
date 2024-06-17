@@ -1,0 +1,453 @@
+#navbar{
+    position: fixed;
+    top: 0;
+    background-color: #00037a;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+}
+
+button{
+    cursor: pointer; /*Make buttons look more clickable by changing mouse icon*/
+}
+
+.vertical-centre{
+    float:left;
+    margin-top: 10px;
+    padding-right: 25px;
+}
+
+.toolbar-button{
+    width: 125px;
+    height: 25px;
+    color: #eeeeee;
+    background-color: #000247;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#button-div{
+    display: block;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+#sim-params{
+    background-color: #00037a;
+    top: 50px;
+    left: 260px;
+    width: 300px;
+    height: 50%;
+    min-height: 450px;
+    margin: 0 auto;
+    padding-left: 30px;
+    overflow: hidden;
+    display: none;
+}
+
+#draw-params{
+    background-color: #000283;
+    top: 50px;
+    left: 300px;
+    width: 300px;
+    height: 40%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding-left: 30px;
+    overflow: hidden;
+    display: none;
+}
+
+#stop-sim{
+    display: none;
+}
+
+#stop-drawing{
+    display: none;
+}
+
+#hide-shapes{
+    display: none;
+}
+
+#shape-tab{
+    padding-top: 10px;
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    background-color: #00014e;
+    color: white;
+    width: 250px;
+    z-index: 1;
+    display: none;
+}
+
+.layer-div{
+    width: 98%;
+    height: 40px;
+    color: #eeeeee;
+    background-color: #095018;
+    border-top: 2px solid black;
+}
+
+.layer-button{
+    position: absolute;
+    width: 75%;
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #eeeeee;
+    background-color: #095018;
+    border: none;
+}
+
+.layer-button:hover{
+    background: #2b753e !important;
+}
+
+.shape-div{
+    width: 98%;
+    height: 40px;
+    color: #eeeeee;
+    background-color: #000230;
+    border: 1px solid black;
+}
+
+.shape-button{
+    position: absolute;
+    width: 75%;
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #eeeeee;
+    background-color: #000230;
+    border: none;
+}
+
+.shape-button:hover{
+    background: #2b2e75 !important;
+}
+
+.visibility-button{
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    color: #eeeeee;
+    background-color: #0065fc;
+    border-radius: 10px;
+    border: solid black;
+}
+
+.horizontal-centre{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 500px;
+    display: table;
+    margin: 0 auto;
+}
+
+#shape-button-div{
+    display: block;
+    position: fixed;
+    top: 235px;
+    bottom: 50px;
+    width: 250px;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+
+/* Use this to overlay the cesium widget */
+.overlay{
+    position: absolute;
+}
+
+#toolbar {
+    top:55px;
+}
+
+.shape-command-button{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    color: #eeeeee;
+    background-color: #000230;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#delete-selected-shape{
+    left: 5px;
+    bottom: 80px;
+}
+
+#edit-selected-shape-button{
+    right: 5px;
+    bottom: 80px;
+}
+
+#group-selected-shapes-button{
+    bottom: 40px;
+    left: 5px;
+}
+
+#disband-group-button{
+    bottom: 40px;
+    right: 5px;
+}
+
+#rename-group-button{
+    bottom: 0px;
+    right: 5px;
+}
+
+#add-to-group-button{
+    bottom: 0px;
+    left: 5px;
+}
+
+#shape-edit-div{
+    position: absolute;
+    height: 170px;
+    width: 100%;
+    top: 10px;
+    left: 0px;
+}
+
+#highlight-color-div{
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    background-color: #000136;
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+.inline{
+    display:inline;
+}
+
+#change-highlight-color-tab{
+    left: 250px;
+    width: 300px;
+    bottom: 0px;
+    height: 100px;
+    padding: 10px;
+    background-color: #00014e;
+    color: white;
+    display: none;
+    position: fixed;
+}
+
+#change-highlight-color-tab-option{
+    text-align: center;
+}
+
+.cancel-button{
+    background-color: tomato;
+    width: 125px;
+    height: 25px;
+    color: #eeeeee;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    bottom: 15px;
+}
+
+.accept-button{
+    background-color:yellowgreen;
+    width: 125px;
+    height: 25px;
+    color: #eeeeee;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+}
+
+#drawing-setting-tab{
+    left: 300px;
+    width: 413px;
+    top: 50px;
+    height: 50px;
+    background-color: #00014e;
+    color: white;
+    display: none;
+    position: fixed;
+}
+
+.select-drawing-param-div{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -150px;
+    width: 300px;
+    height: 150px;
+    padding-left: 10px;
+    background-color: #00014e;
+    color: white;
+    display: none;
+}
+
+.shape-list-prompt{
+    position: fixed;
+    text-align: center;
+    background-color: #00014e;
+    top: 50px;
+    width: 50px;
+    height: 55px;
+    color: white;
+    cursor: pointer;
+}
+
+.show-shape-list{
+    left: 0px;
+}
+
+.hide-shape-list{
+    display: none;
+    left: 200px;
+    z-index: 1;
+}
+
+#edit-selected-shape-tab{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -150px;
+    width: 300px;
+    height: 220px;
+    padding-left: 10px;
+    padding-top: 20px;
+    background-color: #00014e;
+    color: white;
+    display: none;
+}
+
+.drawing-param-div{
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 135px;
+}
+
+.ib {
+    display: inline-block;
+  }
+
+.drawing-param-text{
+    position: absolute;
+    top: 7px;
+    left: 15px;
+}
+
+.drawing-param-button{
+    background-color:#2c2e79;
+    width: 125px;
+    height: 25px;
+    color: #eeeeee;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    left: 5px;
+    top: 20px;
+}
+
+.group-div{
+    width: 98%;
+    height: 40px;
+    color: #eeeeee;
+    background-color: #2c0153;
+}
+
+.group-button{
+    position: absolute;
+    left: 40px;
+    width: 140px;
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #eeeeee;
+    background-color: #2c0153;
+    border: none;
+}
+
+.group-button:hover{
+    background: #6627a1 !important;
+}
+
+.group-drop-down-button{
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #eeeeee;
+    background-color: #2c0153;
+    border: none;
+}
+
+.group-drop-down-button:hover{
+    background: #6627a1 !important;
+}
+
+.drop-down-div{
+    position: relative;
+    width: 230px;
+    left: 0px;
+    right: 5px;
+    outline: 1px solid #6627a1;
+    outline-offset: -1px;
+    display: none;
+}
+
+.layer-drop-down-div{
+    background-color: #095018;
+    width: 98%;
+    height: 20px;
+    outline: none;
+}
+
+#rename-group-div{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -150px;
+    width: 300px;
+    height: 100px;
+    padding-left: 10px;
+    background-color: #00014e;
+    color: white;
+    display: none;
+    padding-top: 20px;
+}

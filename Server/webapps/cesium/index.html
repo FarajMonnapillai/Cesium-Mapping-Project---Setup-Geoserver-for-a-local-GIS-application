@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8" />
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="home.css">
+    <!--Cesium-->
+    <script type="module" src="http://localhost:8080/cesium/libs/Cesium-1.87.1/Source/Cesium.js"></script>
+    <!--jQuery-->
+    <script type="module" src="http://localhost:8080/cesium/libs/jquery/src/jquery.js"></script>
+    <!--APP-6 Military Symbols-->
+    <script type="module" src="http://localhost:8080/cesium/libs/milsymbol/index.esm.js"></script>
+    <!--Simulator-->
+    <script type="module" src="http://localhost:8080/cesium/modules/simulator/simulatorIcon.js"></script>
+    <script type="module" src="http://localhost:8080/cesium/modules/simulator/simulator.js"></script>
+    <script type="module" src="http://localhost:8080/cesium/modules/simulator/jQueryElements.js"></script>
+    <!--Shape Drawing-->
+    <script type="module" src="http://localhost:8080/cesium/modules/shapes/shapeDrawing.js"></script>
+    <script type="module" src="http://localhost:8080/cesium/modules/shapes/jQueryElements.js"></script>
+    <!--Layer Interactions-->
+    <script type="module" src="http://localhost:8080/cesium/modules/layers/layerInteractions.js"></script>
+    <script type="module" src="http://localhost:8080/cesium/modules/layers/jQueryElements.js"></script>
+
+    <title>CS16 Cesium Project</title>
+</head>
+
+<!--Import CSS from Cesium-->
+<style>
+    @import url(http://localhost:8080/cesium/libs/Cesium-1.87.1/Apps/Sandcastle/CesiumSandcastle.css);
+    @import url(http://localhost:8080/cesium/libs/Cesium-1.87.1/Apps/Sandcastle/templates/bucket.css);
+
+    /* Make container smaller so navigation bar can show */
+      #cesiumContainer {
+          width: 100%;
+		      height: 95%;
+          top: 5%;
+		      overflow: hidden;
+      }
+</style>
+
+<body>
+
+    <!--Set up Navigation bar-->
+    <div id="navbar">
+        <h1 class="vertical-centre">CS16 Web App</h1>
+        <div id="button-div">
+            <button id="sim-prompt" class="toolbar-button vertical-centre" type="button">Simulate</button>
+            <button id="stop-sim" class="toolbar-button vertical-centre" type="button">Stop simulator</button>
+            <button id="start-drawing" class="toolbar-button vertical-centre" type="button">Start Drawing</button>
+            <button id="stop-drawing" class="toolbar-button vertical-centre" type="button">Stop Drawing</button>
+        </div>
+    </div>
+
+    <!--Set up Shape Sidebar -->
+    <div id="shape-tab">
+        <div id="shape-edit-div">
+            <h2 class="horizontal-centre">Layers & Shapes</h2>
+            <button id="delete-selected-shape" class="shape-command-button" type="button">Delete Shapes</button>
+            <button id="edit-selected-shape-button" class="shape-command-button" type="button">Edit Shapes</button>
+            <button id="group-selected-shapes-button" class="shape-command-button" type="button" onclick="draw.groupSelectedShapes()">Group Shapes</button>
+            <button id="disband-group-button" class="shape-command-button" type="button" onclick="draw.disbandGroup()">Disband Group</button>
+            <button id="rename-group-button" class="shape-command-button" type="button">Rename Group</button>
+            <button id="add-to-group-button" class="shape-command-button" type="button" onclick="draw.addSelectedShapesToGroup(draw.selectedGroup)">Add To Group</button>
+        </div>
+        <div id="shape-button-div">
+        </div>
+    </div>
+
+    <!--Set up Cesium container elements-->
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay">
+        <h1>Loading...</h1>
+    </div>
+    <div id="toolbar"></div>
+
+    <!--Set up simulator parameter box-->
+    <div id="sim-params" class="overlay">
+        <form class="sim-form">
+            <h3>Simulator:</h3>
+            <h3>Number of icons:</h3>
+            <input type="text" id="no-icons" name="icons">
+            <h3>Points on path:</h3>
+            Min: 
+            <input type="text" id="min-pts" name="min-pts">
+            <br />Max: 
+            <input type="text" id="max-pts" name="max-pts">
+            <h3>Plane height:</h3>
+            Min:
+            <input type="text" id="min-h"name="min-h">
+            <br />Max: 
+            <input type="text" id="max-h" name="max-h">
+            <h3>Refresh rate (seconds):</h3>
+            <input type="text" id="refresh-rate" name="refresh-rate">
+            <br /> <br /> <br />
+            <button type="button" id="start-sim" class="toolbar-button">Simulate</button>
+        </form>
+    </div>
+
+    <!--Set up Change Highlight Colour prompt-->
+    <div id="highlight-color-div">
+        <div class="inline vertical-centre">
+            <h4 class="inline">Change Highlight Colour:</h4>
+            <button id="highlight-color" class="toolbar-button inline" type="button"></button>
+        </div>
+    </div>
+
+    <!--Set up Change Highlight Colour Tab-->
+    <div id="change-highlight-color-tab">
+        <div id="change-highlight-color-tab-option">
+            <h2 class="inline">Select a new Highlight Colour:</h2>
+            <input class="inline" type="color" id="highlight-color-select" name="highlight-color-select">
+        </div>
+        <button type="button" id="cancel-change-highlight-color" class="cancel-button">Cancel</button>
+        <button type="button" id="accept-change-highlight-color" class="accept-button">Accept</button>
+    </div>
+
+    <!--Set up Drawing Parameters Tab-->
+    <div id="drawing-setting-tab">
+        <div style="height: 50px;">
+            <div class="drawing-param-div ib">
+                <div class="drawing-param-text">Shape:</div>
+                <button id="set-shape" class="drawing-param-button" type="button"></button>
+            </div>
+            <div class="drawing-param-div ib">
+                <div class="drawing-param-text">Opacity:</div>
+                <button id="set-opacity"class="drawing-param-button" type="button"></button>
+            </div>
+            <div class="drawing-param-div ib">
+                <div class="drawing-param-text">Shape Colour:</div>
+                <button id="set-color" class="drawing-param-button" type="button"></button>
+            </div>
+        </div>
+    </div>
+
+    <!--Set up Change Drawing Shape prompt-->
+    <div id="shape-setting-div">
+        <select name="shape-select" id="shape-select">
+            <option value="line">Line</option>
+            <option value="polygon">Polygon</option>
+        </select>
+    </div>
+
+    <!--Set up Change Drawing Shape Tab-->
+    <div id="select-shape-div" class="select-drawing-param-div" style="margin: -75px 0 0 -220px; width: 440px;">
+        <h3>Select a Shape:</h3>
+        <div class="inline">
+            <button id="point-button" class="toolbar-button vertical-centre" type="button">Point</button>
+            <button id="line-button" class="toolbar-button vertical-centre" type="button">Line</button>
+            <button id="polygon-button" class="toolbar-button vertical-centre" type="button">Polygon</button>
+        </div>
+        <div class="inline">
+            <button id="cancel-change-shape" class="cancel-button" type="button">Cancel</button>
+            <button id="accept-change-shape" class="accept-button" type="button">Accept</button>
+        </div>
+    </div>
+
+    <!--Set up Change Drawing Opacity prompt-->
+    <div id="select-opacity-div" class="select-drawing-param-div">
+        <h3>Enter Opacity:</h3>
+        <div class="inline">
+            <input type="number" min="0" max="100" step="1" id="shape-opacity" name="shape-opacity" style="width: 40px;"/>%
+        </div>
+        <div class="inline">
+            <button id="cancel-change-opacity" class="cancel-button" type="button">Cancel</button>
+            <button id="accept-change-opacity" class="accept-button" type="button">Accept</button>
+        </div>
+    </div>
+
+    <!--Set up Change Drawing Colour prompt-->
+    <div id="select-color-div" class="select-drawing-param-div">
+        <h3>Choose a Colour:</h3>
+        <div class="inline">
+            <input type="color" id="shape-color-button" name="shape-color-button">
+        </div>
+        <div class="inline">
+            <button id="cancel-change-color" class="cancel-button" type="button">Cancel</button>
+            <button id="accept-change-color" class="accept-button" type="button">Accept</button>
+        </div>
+    </div>
+
+
+    <!--Set up Show Shape list prompt-->
+    <div id="show-shape-list" class="show-shape-list shape-list-prompt">
+        <h1>>></h1>
+    </div>
+
+    <!--Set up Hide Shape list prompt-->
+    <div id="hide-shape-list" class="hide-shape-list shape-list-prompt">
+        <h1><<</h1>
+    </div>
+
+    <!--Set up Edit Selected Shape Tab prompt-->
+    <div id="edit-selected-shape-tab">
+        <div id="edit-shape-name-div">
+        <div>Shape Name</div> <input type="text" id="shape-name" name="shape-name" style="margin-bottom: 20px; background-color: #313268; text-align: center; color: white">
+        </div>
+        <div>Colour</div> <input type="color" id="shape-edit-color-button" name="shape-edit-color-button" style="margin-bottom: 20px; background-color: #313268;">
+        <div>Opacity</div> <input type="number" min="0" max="100" step="1" id="edit-shape-opacity" name="edit-shape-opacity" style="width: 40px; background-color: #313268; color: white"/>%
+        <div class="inline">
+            <button id="cancel-edit-shape" class="cancel-button" type="button">Cancel</button>
+            <button id="accept-edit-shape" class="accept-button" type="button">Accept</button>
+        </div>
+    </div>
+
+    <!--Set up Group Renaming Tab-->
+    <div id="rename-group-div">
+        <div>Group Name</div> <input type="text" id="group-name" name="group-name" style="margin-bottom: 20px; background-color: #313268; text-align: center; color: white">
+        <div class="inline">
+            <button id="cancel-group-rename" class="cancel-button" type="button">Cancel</button>
+            <button id="accept-group-rename" class="accept-button" type="button" onclick="draw.constructor.renameGroup(draw.selectedGroup)">Accept</button>
+        </div>
+    </div>
+
+    <!--Start cesium script-->    
+    <script type="module" src="http://localhost:8080/cesium/loadCesium.js"></script>
+  </body>
+</html>

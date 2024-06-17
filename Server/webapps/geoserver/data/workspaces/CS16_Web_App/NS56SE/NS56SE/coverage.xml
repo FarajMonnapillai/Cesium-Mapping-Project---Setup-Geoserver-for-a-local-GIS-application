@@ -1,0 +1,129 @@
+<coverage>
+  <id>CoverageInfoImpl--4e1fff1b:17e9698330a:-7928</id>
+  <name>NS56SE</name>
+  <nativeName>NS56SE</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4e1fff1b:17e9698330a:-7ffe</id>
+  </namespace>
+  <title>NS56SE</title>
+  <description>Generated from GeoTIFF</description>
+  <keywords>
+    <string>NS56SE</string>
+    <string>WCS</string>
+    <string>GeoTIFF</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;OSGB 1936 / British National Grid&quot;, &#xd;
+  GEOGCS[&quot;OSGB 1936&quot;, &#xd;
+    DATUM[&quot;OSGB 1936&quot;, &#xd;
+      SPHEROID[&quot;Airy 1830&quot;, 6377563.396, 299.3249646, AUTHORITY[&quot;EPSG&quot;,&quot;7001&quot;]], &#xd;
+      TOWGS84[446.448, -125.157, 542.06, 0.15, 0.247, 0.842, -20.489], &#xd;
+      AUTHORITY[&quot;EPSG&quot;,&quot;6277&quot;]], &#xd;
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xd;
+    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xd;
+    AUTHORITY[&quot;EPSG&quot;,&quot;4277&quot;]], &#xd;
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], &#xd;
+  PARAMETER[&quot;central_meridian&quot;, -2.0], &#xd;
+  PARAMETER[&quot;latitude_of_origin&quot;, 49.0], &#xd;
+  PARAMETER[&quot;scale_factor&quot;, 0.9996012717], &#xd;
+  PARAMETER[&quot;false_easting&quot;, 400000.0], &#xd;
+  PARAMETER[&quot;false_northing&quot;, -100000.0], &#xd;
+  UNIT[&quot;m&quot;, 1.0], &#xd;
+  AXIS[&quot;Easting&quot;, EAST], &#xd;
+  AXIS[&quot;Northing&quot;, NORTH], &#xd;
+  AUTHORITY[&quot;EPSG&quot;,&quot;27700&quot;]]</nativeCRS>
+  <srs>EPSG:27700</srs>
+  <nativeBoundingBox>
+    <minx>255000.0</minx>
+    <maxx>260000.0</maxx>
+    <miny>660000.0</miny>
+    <maxy>665000.0</maxy>
+    <crs class="projected">EPSG:27700</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-4.318068010652037</minx>
+    <maxx>-4.235680094280661</maxx>
+    <miny>55.81143300498755</miny>
+    <maxy>55.85779901796863</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>REPROJECT_TO_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="dirName">NS56SE_NS56SE</entry>
+  </metadata>
+  <store class="coverageStore">
+    <id>CoverageStoreInfoImpl--4e1fff1b:17e9698330a:-7929</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <nativeFormat>GeoTIFF</nativeFormat>
+  <grid dimension="2">
+    <range>
+      <low>0 0</low>
+      <high>5000 5000</high>
+    </range>
+    <transform>
+      <scaleX>1.0</scaleX>
+      <scaleY>-1.0</scaleY>
+      <shearX>0.0</shearX>
+      <shearY>0.0</shearY>
+      <translateX>255000.5</translateX>
+      <translateY>664999.5</translateY>
+    </transform>
+    <crs>EPSG:27700</crs>
+  </grid>
+  <supportedFormats>
+    <string>GIF</string>
+    <string>PNG</string>
+    <string>JPEG</string>
+    <string>TIFF</string>
+    <string>GeoPackage (mosaic)</string>
+    <string>ArcGrid</string>
+    <string>GEOTIFF</string>
+    <string>ImageMosaic</string>
+  </supportedFormats>
+  <interpolationMethods>
+    <string>nearest neighbor</string>
+    <string>bilinear</string>
+    <string>bicubic</string>
+  </interpolationMethods>
+  <defaultInterpolationMethod>nearest neighbor</defaultInterpolationMethod>
+  <dimensions>
+    <coverageDimension>
+      <name>PALETTE_INDEX</name>
+      <description>GridSampleDimension[-Infinity,Infinity]</description>
+      <range>
+        <min>-inf</min>
+        <max>inf</max>
+      </range>
+      <dimensionType>
+        <name>UNSIGNED_8BITS</name>
+      </dimensionType>
+    </coverageDimension>
+  </dimensions>
+  <requestSRS>
+    <string>EPSG:27700</string>
+  </requestSRS>
+  <responseSRS>
+    <string>EPSG:27700</string>
+  </responseSRS>
+  <parameters>
+    <entry>
+      <string>InputTransparentColor</string>
+      <null/>
+    </entry>
+    <entry>
+      <string>SUGGESTED_TILE_SIZE</string>
+      <string>512,512</string>
+    </entry>
+    <entry>
+      <string>RescalePixels</string>
+      <boolean>true</boolean>
+    </entry>
+  </parameters>
+  <nativeCoverageName>NS56SE</nativeCoverageName>
+</coverage>

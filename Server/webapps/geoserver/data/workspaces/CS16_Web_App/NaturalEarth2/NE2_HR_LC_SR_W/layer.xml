@@ -1,0 +1,16 @@
+<layer>
+  <name>NE2_HR_LC_SR_W</name>
+  <id>LayerInfoImpl--1b1840dd:17e9848dd35:-7dbd</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e1fff1b:17e97e7c632:-42cb</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--1b1840dd:17e9848dd35:-7dbe</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-01-26 21:49:12.780 UTC</dateCreated>
+</layer>

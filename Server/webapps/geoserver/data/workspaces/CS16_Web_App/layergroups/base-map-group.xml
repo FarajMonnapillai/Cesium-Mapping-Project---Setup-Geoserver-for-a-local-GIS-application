@@ -1,0 +1,65 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--4e1fff1b:17e9698330a:-4c6a</id>
+  <name>base-map-group</name>
+  <mode>SINGLE</mode>
+  <workspace>
+    <id>WorkspaceInfoImpl--4e1fff1b:17e9698330a:-7fff</id>
+  </workspace>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--1b1840dd:17e9848dd35:-7dbd</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-574d</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7d3e</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7924</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7922</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7927</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7920</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e97e7c632:-42cb</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-119c</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-119d</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-38ff</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-38ff</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-38ff</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4e1fff1b:17e9698330a:-38ff</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>-180.0</minx>
+    <maxx>180.00000000007202</maxx>
+    <miny>-90.000000000036</miny>
+    <maxy>90.00000000000001</maxy>
+    <crs>EPSG:4326</crs>
+  </bounds>
+  <dateCreated>2022-01-26 17:54:02.182 UTC</dateCreated>
+  <dateModified>2022-02-01 16:15:13.304 UTC</dateModified>
+</layerGroup>

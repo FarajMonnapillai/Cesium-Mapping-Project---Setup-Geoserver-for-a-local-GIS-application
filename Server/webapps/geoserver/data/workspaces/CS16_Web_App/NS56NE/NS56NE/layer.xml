@@ -1,0 +1,17 @@
+<layer>
+  <name>NS56NE</name>
+  <id>LayerInfoImpl--4e1fff1b:17e9698330a:-7924</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-393d9e10:17d4f3e9da6:-7ffd</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--4e1fff1b:17e9698330a:-7925</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-01-26 17:27:29.949 UTC</dateCreated>
+  <dateModified>2022-01-26 17:47:49.388 UTC</dateModified>
+</layer>

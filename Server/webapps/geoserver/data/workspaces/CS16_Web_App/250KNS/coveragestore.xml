@@ -1,0 +1,14 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--4e1fff1b:17e9698330a:-7f26</id>
+  <name>250KNS</name>
+  <description>250K Tile of Glasgow</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--4e1fff1b:17e9698330a:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2022-01-26 17:09:25.663 UTC</dateCreated>
+  <dateModified>2022-01-26 17:16:48.76 UTC</dateModified>
+  <url>file:worldmap/OS/250k/NS.tif</url>
+</coverageStore>

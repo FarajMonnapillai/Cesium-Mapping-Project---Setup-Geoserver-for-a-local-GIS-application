@@ -1,0 +1,16 @@
+<layer>
+  <name>BlackMarble_2016_01deg_gray_geo</name>
+  <id>LayerInfoImpl-67ca9188:17ef9045a77:-7fd5</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e1fff1b:17e97e7c632:-42cb</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-67ca9188:17ef9045a77:-7fd6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-14 16:31:26.532 UTC</dateCreated>
+</layer>

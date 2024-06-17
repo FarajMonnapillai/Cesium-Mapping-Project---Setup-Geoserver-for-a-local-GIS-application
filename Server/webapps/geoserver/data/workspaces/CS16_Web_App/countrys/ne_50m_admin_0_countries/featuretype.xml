@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--27720a4e:17e9bfc2025:-7e73</id>
+  <name>ne_50m_admin_0_countries</name>
+  <nativeName>ne_50m_admin_0_countries</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4e1fff1b:17e9698330a:-7ffe</id>
+  </namespace>
+  <title>ne_50m_admin_0_countries</title>
+  <keywords>
+    <string>features</string>
+    <string>ne_50m_admin_0_countries</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-180.0</minx>
+    <maxx>180.0</maxx>
+    <miny>-89.99892578125002</miny>
+    <maxy>83.599609375</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-180.0</minx>
+    <maxx>180.0</maxx>
+    <miny>-89.99892578125002</miny>
+    <maxy>83.599609375</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--27720a4e:17e9bfc2025:-7e74</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

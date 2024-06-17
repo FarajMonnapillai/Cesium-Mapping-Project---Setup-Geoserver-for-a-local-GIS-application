@@ -1,0 +1,12 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--1b1840dd:17e9848dd35:-7fff</id>
+  <name>NaturalEarth2</name>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--4e1fff1b:17e9698330a:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2022-01-26 21:41:46.883 UTC</dateCreated>
+  <url>file:worldmap/NE2_HR_LC_SR_W.tif</url>
+</coverageStore>
